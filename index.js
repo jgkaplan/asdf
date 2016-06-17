@@ -10,10 +10,14 @@ let colors = [chalk.red, chalk.green, chalk.yellow, chalk.blue, chalk.magenta, c
 let currentColor = colors[Math.floor(Math.random()*colors.length)]
 
 process.stdin.on('keypress', function(ch,key) {
-	if (key && key.ctrl && key.name=='c'){
-		process.stdin.pause();
+	if (key){
+		if ((key.ctrl && key.name=='c') || key.name=='escape'){
+			process.stdin.pause();
+		} else if (key.name=="return"){
+			process.stdout.write('\n');
+		}
 	}
-	console.log(colors[Math.floor(Math.random()*colors.length)](ch));
+	process.stdout.write(colors[Math.floor(Math.random()*colors.length)](ch));
 });
 
 process.stdin.setRawMode(true);
