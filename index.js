@@ -7,12 +7,13 @@ const keypress = require('keypress');
 keypress(process.stdin);
 
 let colors = [chalk.red, chalk.green, chalk.yellow, chalk.blue, chalk.magenta, chalk.cyan, chalk.gray];
+let currentColor = colors[Math.floor(Math.random()*colors.length)]
 
 process.stdin.on('keypress', function(ch,key) {
-	console.log(colors[Math.floor(Math.random()*colors.length)]("asdf"));
 	if (key && key.ctrl && key.name=='c'){
 		process.stdin.pause();
 	}
+	console.log(colors[Math.floor(Math.random()*colors.length)](ch));
 });
 
 process.stdin.setRawMode(true);
