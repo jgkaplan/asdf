@@ -4,7 +4,7 @@
   "description": "Key mashing, color changing, shell program",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "node ."
   },
   "repository": {
     "type": "git",
@@ -12,8 +12,15 @@
   },
   "author": "jgkaplan",
   "license": "ISC",
+  "bin": {
+    "asdf": "./index.js"
+  },
   "bugs": {
     "url": "https://github.com/jgkaplan/asdf/issues"
   },
-  "homepage": "https://github.com/jgkaplan/asdf#readme"
+  "homepage": "https://github.com/jgkaplan/asdf#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "keypress": "^0.2.1"
+  }
 }
