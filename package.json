@@ -11,7 +11,7 @@
     "url": "git+https://github.com/jgkaplan/asdf.git"
   },
   "author": "jgkaplan",
-  "license": "ISC",
+  "license": "MIT",
   "bin": {
     "asdf": "./index.js"
   },
