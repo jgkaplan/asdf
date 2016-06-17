@@ -1,0 +1,19 @@
+{
+  "name": "asdf",
+  "version": "1.0.0",
+  "description": "Key mashing, color changing, shell program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgkaplan/asdf.git"
+  },
+  "author": "jgkaplan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgkaplan/asdf/issues"
+  },
+  "homepage": "https://github.com/jgkaplan/asdf#readme"
+}
