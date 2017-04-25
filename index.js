@@ -20,13 +20,17 @@ process.stdin.on('keypress', function(ch,key) {
 			process.stdout.write('\n');
 		} else if (key.name=='space'){
 			currentColor = randomColor();
-		}
+		} else if (key.name == 'backspace'){
+            process.stdout.write('\b\x1b[K');
+        }
 	}
-	if (type == 'w'){
-		process.stdout.write(currentColor(ch));
-	}else{
-		process.stdout.write((randomColor())(ch));
-	}
+    if(ch){
+        if (type == 'w'){
+    		process.stdout.write(currentColor(ch));
+    	}else{
+    		process.stdout.write((randomColor())(ch));
+    	}
+    }
 });
 
 process.stdin.setRawMode(true);
